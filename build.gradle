@@ -8,14 +8,17 @@ group = 'com.hukai'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility = '1.8'
+    sourceCompatibility(JavaVersion.VERSION_1_8)
 }
 
 repositories {
+    maven { url 'https://maven.aliyun.com/repository/public' }
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
+    implementation 'com.huakai:huakai-projectx-sdk:0.0.1-SNAPSHOT'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
